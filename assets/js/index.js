@@ -3,7 +3,7 @@ var nebPay = new NebPay();
 
 
 
-var dappAddress = "n21G2NGUV3pecQfDHFCLRWtZsx6wrc3b1rx";
+var dappAddress = "n1uTYPt5KZPumAkA6M7FWMurwrQzCvFRKRE";
 
 q("getAllBook");
   
