@@ -27,6 +27,7 @@
 
 								<!-- Nav -->
 									<nav id="nav">
+										<img src="images/1527755708_859412.png" width=100 height=30 style="float: left;vertical-align:middle;margin-top: 10px;"></img>
 										<ul>
 											<li class="current_page_item"><a href="index.html">Home</a></li>
 											<li><a href="index.html#portfolio-preview">Free</a></li>
@@ -71,18 +72,19 @@
 					</div>
 
                 <div class="form_list">
+                	<div id="copydiv" class="" style="display:none;"></div>
                     <form style="margin-top: 50px;">
                         <div class="form_box">
                             <span class="form_txt">server:</span>
-                            <input class="form_input" type="text" placeholder="please insert" value="" id="server"/>
+                            <input class="form_input" type="text" placeholder="please insert server" value="" id="server"/><span style="color:red">*</span>
                         </div>
                         <div class="form_box">
                             <span class="form_txt">server_port:</span>
-                            <input class="form_input" type="text" placeholder="please insert" value="" id="server_port"/>
+                            <input class="form_input" type="text" placeholder="please insert server_port" value="" id="server_port"/><span style="color:red">*</span>
                         </div>
                         <div class="form_box">
                             <span class="form_txt">password:</span>
-                            <input class="form_input" type="text" placeholder="please insert" value="" id="password"/>
+                            <input class="form_input" type="password" placeholder="please insert password" value="" id="password"/><span style="color:red">*</span>
                         </div>
                         <div class="form_box">
                             <span class="form_txt">method:</span>
@@ -102,15 +104,15 @@
 								<option>camellia-256-cfb</option>
 								<option>camellia-192-cfb</option>
 								<option>camellia-128-cfb</option>
-							</select>
+							</select><span style="color:red">*</span>
                         </div>
                         <div class="form_box">
                             <span class="form_txt">remark:</span>
-                            <input class="form_input" type="text" placeholder="please insert" value="" id="remark"/>
+                            <input class="form_input" type="text" placeholder="" value="" id="remark"/>
                         </div>
                     </form>
                     <footer style="text-align: center;">
-						<a id="submit" class="button button-alt" >Share</a>
+						<a id="submit" class="button button-alt" style="cursor:pointer;">Share</a>
                     </footer>
 					<div style="text-align: center;">
 					<p>If you like, you can share a ss that you built yourself or you purchased.</p>
@@ -122,24 +124,12 @@
 					<div class="wrapper" id="footer-wrapper">
 						<section id="portfolio-preview">
 							<header>
-								<p>Free experimental information, Click to enlarge, scan to configure</p>
+								<p>Free experimental information, Click to show, scan to configure</p>
 							</header>
-							<div class="row">
-								<div class="4u 12u(mobile)">
-									<a id="jp01" href="" class="image fit">
-										<img src="images/portfolio/thumbnails/pic01.jpg" alt="">
-									</a></div>
-								<div class="4u 12u(mobile)">
-									<a id="jp02" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAAACXBIWXMAAAsSAAALEgHS3X78AAABc0lEQVRoge3WwXIDMQgDUP3/T9OpkTCb5gDbq9xkJrbfXkAlQUwXLC0tLS0/JXKdLc7rfDo73VguJEuL+Hv2PLCcyd/q1qlaAPQby7XU6XlXsi3fSu5g+V8pHxys7MRNt+VG5oovf7yx3MhaWfWImrv9znIqWXcWXxX/GmfLiTw6QhA1dPW45UaSKMWAQq0nLXdSAc4OKNDcWW5llVpclWfxw3IlM8A8Y6aLoLaWY4m4X17nOR2pEZYrmWnOIGfpoYAr25ZzqRORqGS3UWE5lplZtCYE06x2WC4kB0KLrA7aaLAcSyKFF1l2NgG6tZzKgjzO63zgORksR1L//hVifYzPyluOZGgWyGXp25OWG6nYhnLcyt1aYTmWvczi7QeC5UJqZZiPYv2ZacuVhGpc75boeEwGy4nUx/sqggeynEmg1TkDjduRsHwto5KL6oblS6nIstw5ISz3kr5tOHsvtZzL+811O9EOLXdytCwtLS0t+/oB13quPhIXphQAAAAASUVORK5CYII=" class="image fit">
-										<img src="images/portfolio/thumbnails/pic02.jpg" alt="">
-									</a></div>
-								<div class="4u 12u(mobile)">
-									<a id="jp03" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAAACXBIWXMAAAsSAAALEgHS3X78AAABd0lEQVRoge3VwZLDIAwDUP3/T3unWDJOdrvF6VW00yHw6EF4HMTpgKWlpaXlXSLHegTWY/BTO5YDyWgRv9euC5ZnMrPmwuu78wcsH0qtah6WX0k+pbH8Qsr3Iyv/uCLLI8n30x+fN+84y/9kjbX4+uK2YTmRzJ3htx9dgOVM6gANsDdw78mWHyWrV1Wck3pzBSyncsW+HsAyvl6G5Uhqqqrd+VeZWw4kE9aOosY+YzmUrF61B3ZcVKVbTmS0HdS5XsiWE7nLt3fcqm7LkWTKfZ6ojlhOZAaehQzmDhV33O7I8qNES1d5h5oDFywnMqDwqZm56ttyJFW52Gv7Hy7JWx7JfM7wtcLyvpy3PJOoPqCwd9xtankqF8vJzl3vsrAcSY2qZR7K3HtnsDyRUMZQ7LqPrOqwnElNWb1xPdiQ5ZnMDgBkT1DeupGwfCiDfSFil3VYPpY7fWI5y5GUZ+DqEdGo5blkB6hq1kpdheVEHg1LS0tLyz5+AAdFbn45cOOnAAAAAElFTkSuQmCC" class="image fit">
-										<img src="images/portfolio/thumbnails/pic03.jpg" alt="">
-									</a></div>
+							<div class="row" id="row">
 							</div>
 							<footer>
-								<a id="change" class="button button-alt">Change batch</a>
+								<a id="change" class="button button-alt" style="cursor:pointer;">Change a batch</a>
 							</footer>
 							<p>Picture and actual content Irrelevant</p>
 						</section>
@@ -150,10 +140,17 @@
 <!-- Premium -->
 					<section id="footer">
 							<header>
-									<h2>Premium Service</h2>
+									<h2>About</h2>
 							</header>
 							<ul class="contact">
-									<li><a href="http://hato.be" class="button">Click here</a></li>
+								<p>SS - A secure socks5 proxy, designed to protect your Internet traffic.</p>
+								<p>With the help of the Nebula First Season Incentive Program and the work in progress,<br> 
+								I have made my own ideas an application based on the nebula chain. This application <br> 
+								applies a variety of encryption algorithms, converts a form into a string, and then <br> 
+								converts the string into a two-dimensional code, which can be directly identified, <br> 
+								the password is not visible, and it is safe and reliable. I hope my application can help<br> 
+								 more people to do meaningful things, and then we work together to maintain the safety<br> 
+								  and stability of the blockchain.</p>
 							</ul>
 					</section>
 
@@ -183,17 +180,19 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/base64csvtojson.js"></script>
+ 			<script src="assets/js/jquery.qrcode.min.js"></script>  
+ 			<script type="text/javascript" src="assets/js/nebPay.js"></script>
 			<script src="assets/js/index.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-17743163-22', 'auto');
-  ga('send', 'pageview');
-
-</script>
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			
+			  ga('create', 'UA-17743163-22', 'auto');
+			  ga('send', 'pageview');
+			
+			</script>
 
 	</body>
 </html>
