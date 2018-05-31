@@ -106,8 +106,12 @@ function doSomething(name){
 
 function cbPush(resp) {
 	console.log("response of push: " + resp);
-	//alert("感谢推荐！我们的进步来自您不懈的推荐,ps:大概15秒之后，即可看到自己推荐的书籍");
+	alert("Thank You！Data success needs about 15 seconds!");
+	$("#method").val("");
+	$("#password").val("");
+	$("#server").val("");
+	$("#server_port").val("");
+	$("#remark").val("");
 	// q("getNewBook");
-	
 }
 
