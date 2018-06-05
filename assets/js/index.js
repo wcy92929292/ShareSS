@@ -26,10 +26,17 @@ function cbSearch(resp) {
 	if(result.length==0){
 		return false;
 	}
+	var arr=[];
+	for(var i=0;arr.length<6;i++){
+		var num= parseInt((17)*Math.random());  
+	    if(arr.indexOf(num)==-1){
+	        arr.push(num);
+	    }
+	}
 	if(result.length<6){
 		for(var i=0;i<result.length;i++){
 			$("#row").append('<div class="4u 12u(mobile)">'+
-					'<img class="hidepic" style="cursor:pointer;" src="images/portfolio/thumbnails/pic0'+parseInt((6)*Math.random())+'.jpg" alt="">'+
+					'<img class="hidepic" style="cursor:pointer;" src="images/portfolio/thumbnails/pic0'+arr[i]+'.jpg" alt="">'+
 					'<img class="realpic" style="cursor:pointer;display:none;width:230px;height:230px;" src="'+result[i]+'" alt="">'+
 				'</div>'
 		)
@@ -37,7 +44,7 @@ function cbSearch(resp) {
 	}else{
 		for(var i=0;i<6;i++){
 			$("#row").append('<div class="4u 12u(mobile)">'+
-					'<img class="hidepic" style="cursor:pointer;" src="images/portfolio/thumbnails/pic0'+parseInt((6)*Math.random())+'.jpg" alt="">'+
+					'<img class="hidepic" style="cursor:pointer;" src="images/portfolio/thumbnails/pic0'+arr[i]+'.jpg" alt="">'+
 					'<img class="realpic" style="cursor:pointer;display:none;width:230px;height:230px;" src="'+result[i]+'" alt="">'+
 				'</div>'
 		)
