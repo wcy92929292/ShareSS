@@ -1,5 +1,27 @@
 "use strict";
 
+var item = function(text) {
+	if(text) {
+		var obj=JSON.parse(text);
+		this.bookName = obj.bookName;
+		this.type = obj.type;
+		this.url = obj.url;
+		this.content = obj.content;
+	}else {
+		this.bookName ="";
+		this.type = "";
+		this.url = "";
+		this.content = "";
+	}
+};
+
+item.prototype ={
+	toString :function() {
+		return JSON.stringify(this);
+	}
+};
+
+
 var Connotations = function (){
 	LocalContractStorage.defineMapProperty(this, "arrayMap");
     LocalContractStorage.defineProperty(this, "size");
@@ -38,5 +60,13 @@ Connotations.prototype ={
 		
 		return arr;
 	}
+	
+	getRansomBook:function(){
+		var num=parseInt((this.size)*Math.random());
+		return this.arrayMap.get(num);
+	},
+	getNewBook:function(){
+		return this.arrayMap.get(this.size-1);
+	},
 };
 module.exports = Connotations;
