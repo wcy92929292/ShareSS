@@ -3,7 +3,7 @@ var nebPay = new NebPay();
 
 
 
-var dappAddress = "n1uTYPt5KZPumAkA6M7FWMurwrQzCvFRKRE";
+var dappAddress = "n1ki7ytbAcJoxAxZGFrLsz6D7YwnFpQv68p";
 
 q("getAllBook");
   
@@ -37,16 +37,18 @@ function cbSearch(resp) {
 		for(var i=0;i<result.length;i++){
 			$("#row").append('<div class="4u 12u(mobile)">'+
 					'<img class="hidepic" style="cursor:pointer;" src="images/portfolio/thumbnails/pic0'+arr[i]+'.jpg" alt="">'+
-					'<img class="realpic" style="cursor:pointer;display:none;width:230px;height:230px;" src="'+result[i]+'" alt="">'+
-				'</div>'
+					'<img class="realpic" style="cursor:pointer;display:none;width:230px;height:230px;" src="'+result[i].split("+++")[0]+'" alt="">'+
+					'<span>Sharer:'+result[i].split("+++")[1]+'<span>'+
+					'</div>'
 		)
 		}
 	}else{
 		for(var i=0;i<6;i++){
 			$("#row").append('<div class="4u 12u(mobile)">'+
 					'<img class="hidepic" style="cursor:pointer;" src="images/portfolio/thumbnails/pic0'+arr[i]+'.jpg" alt="">'+
-					'<img class="realpic" style="cursor:pointer;display:none;width:230px;height:230px;" src="'+result[i]+'" alt="">'+
-				'</div>'
+					'<img class="realpic" style="cursor:pointer;display:none;width:230px;height:230px;" src="'+result[i].split("+++")[0]+'" alt="">'+
+					'<span>Sharer:'+result[i].split("+++")[1]+'<span>'+
+					'</div>'
 		)
 		}
 	}
