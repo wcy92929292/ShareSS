@@ -1,6 +1,6 @@
 "use strict";
 
-var item = function(text) {
+/*var item = function(text) {
 	if(text) {
 		var obj=JSON.parse(text);
 		this.bookName = obj.bookName;
@@ -19,7 +19,7 @@ item.prototype ={
 	toString :function() {
 		return JSON.stringify(this);
 	}
-};
+};*/
 
 
 var Connotations = function (){
@@ -60,13 +60,5 @@ Connotations.prototype ={
 		
 		return arr;
 	}
-	
-	getRansomBook:function(){
-		var num=parseInt((this.size)*Math.random());
-		return this.arrayMap.get(num);
-	},
-	getNewBook:function(){
-		return this.arrayMap.get(this.size-1);
-	},
 };
 module.exports = Connotations;
