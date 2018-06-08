@@ -116,7 +116,7 @@ function doSomething(name){
 
 function cbPush(resp) {
 	console.log("response of push: " + resp);
-	alert("Thank You！Data success needs about 15 seconds!");
+//	alert("Thank You！Data success needs about 15 seconds!");
 	if(typeof resp == 'string'){
 	console.log('reject');
 	alert("You have canceled your share！");
