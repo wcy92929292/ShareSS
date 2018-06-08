@@ -1,6 +1,7 @@
 var NebPay = require("nebpay");     
 var nebPay = new NebPay();
-
+var serialNumber;
+var intervalQuery;
 
 
 var dappAddress = "n1fdh8NpGeCUz4zxBfMWW7NdpwuC1csMGB2";
@@ -116,11 +117,32 @@ function doSomething(name){
 function cbPush(resp) {
 	console.log("response of push: " + resp);
 	alert("Thank You！Data success needs about 15 seconds!");
-	$("#method").val("");
-	$("#password").val("");
-	$("#server").val("");
-	$("#server_port").val("");
-	$("#remark").val("");
+	if(typeof resp == 'string'){
+	console.log('reject');
+	alert("You have canceled your share！");
+	   }else{
+			//alert("success");
+			intervalQuery = setInterval(function(){
+					funcIntervalQuery();
+			},15000); 
+	   }
+//	$("#method").val("");
+//	$("#password").val("");
+//	$("#server").val("");
+//	$("#server_port").val("");
+//	$("#remark").val("");
 	// q("getNewBook");
 }
-
+function funcIntervalQuery(){
+	  nebPay.queryPayInfo(serialNumber)
+		  .then(function(resp){
+			console.log("response:"+resp);
+			var respObject = JSON.parse(resp);
+			if(respObject.code ===1){
+			  alert("success！reloading...");
+			  location.reload();
+			}
+		  }).catch(function(err){
+			console.log(err);
+		  });
+	}
